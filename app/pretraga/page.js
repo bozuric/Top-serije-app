@@ -25,7 +25,7 @@ export default async function Pretraga({ searchParams }) {
       <h1>Rezultati pretrage</h1>
       {upit.trim() === "" && <p>Upiši pojam za pretragu serija.</p>}
       {greska && <p style={{ color: "red" }}>Greška pri dohvaćanju rezultata.</p>}
-      {!greska && upit.trim() !== "" && serije.length === 0 && <p>Nema rezultata za "{upit}".</p>}
+      {!greska && upit.trim() !== "" && serije.length === 0 && <p>Nema rezultata za &quot;{upit}&quot;.</p>}
       <div style={{ display: "flex", flexWrap: "wrap", gap: 24, marginTop: 24 }}>
         {serije.map(show => (
           <div key={show.id} style={{ width: 200, background: "#fff", borderRadius: 8, boxShadow: "0 2px 8px #0001", padding: 12 }}>
