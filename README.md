@@ -1,90 +1,80 @@
-🌐 Link aplikacije
-https://top-tv-serije.vercel.app
+# 🎬 Top TV Serije
 
+Top TV Serije je moderna Next.js web aplikacija za pregled, pretragu i spremanje omiljenih TV serija. Omogućuje detaljan prikaz serija, epizoda i glumaca, kao i upravljanje favoritima putem vlastitih API ruta. Aplikacija je optimizirana za performanse i testirana Lighthouse alatom.
 
-🛠️ Tehnologije korištene
-Next.js – React framework (App Router, SSR, dinamičke rute, API rute)
+---
 
-CSS Modules & Global CSS – Modularno i globalno stiliziranje
+## 🌐 Link aplikacije
 
-TVmaze API – Otvoreni API za podatke o serijama, epizodama i glumcima
+[https://top-tv-serije.vercel.app](https://top-tv-serije.vercel.app)
 
-Vercel – Platforma za deploy aplikacije
+---
 
-GitHub – Verzijska kontrola i suradnja
+## 🛠️ Tehnologije korištene
 
+- **Next.js** – React framework za SSR, App Router i brzu izradu aplikacija
+- **CSS Modules \& Global CSS** – Modularno i globalno stiliziranje bez Tailwinda
+- **TVmaze API** – Otvoreni API za podatke o serijama, epizodama i glumcima
+- **Vercel** – Platforma za deploy aplikacije
+- **GitHub** – Verzijska kontrola i suradnja
 
-🚀 Funkcionalnosti
-Pretraga i pregled TV serija (horizontalni infinite scroll na početnoj)
+---
 
-Prikaz detalja za svaku seriju (poster, žanrovi, ocjena, status, opis, glumci, epizode)
+## 🚀 Funkcionalnosti
 
-Spremanje i uklanjanje serija iz favorita (vlastite API rute, bez baze)
+- Pretraga i pregled TV serija (horizontalni infinite scroll na početnoj)
+- Prikaz detalja za svaku seriju (poster, žanrovi, ocjena, status, opis, glumci, epizode)
+- Spremanje i uklanjanje serija iz favorita (vlastite API rute, bez baze)
+- Prikaz i brisanje favorita na posebnoj stranici
+- Prikaz svih epizoda i glumaca s mogućnošću proširenja
+- Prilagođena 404 (Not Found) stranica i loading prikaz
+- Brzo, responzivno i pristupačno korisničko sučelje (CSS, sticky footer, moderni header)
+- SEO meta podaci (dynamic title/description, OpenGraph)
+- Visoke performanse (testirano s Lighthouse)
 
-Prikaz i brisanje favorita na posebnoj stranici
+---
 
-Prikaz svih epizoda i glumaca s mogućnošću proširenja
+## 🏗️ Lokalno pokretanje aplikacije
 
-Prilagođena 404 (Not Found) stranica i loading prikaz
-
-Brzo, responzivno i pristupačno korisničko sučelje (CSS, sticky footer, moderni header)
-
-SEO meta podaci (dynamic title/description, OpenGraph)
-
-Visoke performanse (testirano s Lighthouse)
-
-
-🏗️ Upute za lokalno pokretanje
-bash
+```bash
 git clone https://github.com/bozuric/Top-serije-app.git
 cd Top-serije-app
 npm install
 npm run dev
+```
+---
 
+## 📦 Build \& Deploy
 
-📦 Build & Deploy
 Za lokalni build:
 
-bash
+```bash
 npm run build
 npm run start
+```
+
 Za deploy koristi Vercel – poveži repozitorij, deploy je automatski.
-Aplikacija je online na: https://top-tv-serije.vercel.app
 
+---
 
-ℹ️ Napomena
-Favoriti se spremaju u memoriji servera (RAM) – podaci se brišu nakon restarta servera ili deploya.
+## ℹ️ Napomena
 
-.env nije potreban za osnovnu funkcionalnost, ali možeš koristiti NEXT_PUBLIC_SITE_URL za server-side provjeru favorita.
+- Favoriti se spremaju u memoriji servera (RAM) – podaci se brišu nakon restarta servera ili deploya.
+- Nije potrebna nikakva `.env` konfiguracija za osnovnu funkcionalnost, osim ako želiš promijeniti bazni URL za API (vidi `.env` primjer u kodu).
+- Prikaz slika koristi Next.js `<Image />` komponentu i automatsku optimizaciju.
 
-Prikaz slika koristi Next.js <Image /> komponentu i automatsku optimizaciju.
+---
 
+## 👨‍💻 Autor
 
-💡 Arhitektura i logika (umjesto opširnih komentara u kodu)
-API rute (app/api/favorites/route.js):
-Favoriti se spremaju u memoriju servera (RAM). GET vraća sve favorite, POST dodaje novi, DELETE briše po ID-u. Ova metoda je jednostavna za demo, ali nije trajna.
-
-Favoriti:
-Klijentska komponenta koristi useEffect za dohvat trenutnog stanja favorita i useTransition za bolje korisničko iskustvo prilikom dodavanja/brisanja (izbjegava blokiranje sučelja).
-
-Horizontalni infinite scroll:
-Početna stranica koristi server-side fetch i deduplikaciju po ID-u. Infinite scroll je riješen tako da se nove serije učitavaju kad korisnik dođe blizu kraja scrolla.
-
-Prikaz detalja serije:
-Server-side fetch koristi paralelno dohvaćanje podataka o seriji, epizodama i glumcima.
-SEO meta podaci generiraju se dinamički za svaku seriju.
-
-Epizode i glumci:
-Prikaz epizoda i glumaca je jednostavan, s fallbackom za prazne podatke i mogućnošću prikaza svih glumaca.
-
-404 i loading:
-Dodane su globalne fallback stranice za bolji UX.
-
-Komentari u kodu:
-Kod je pisan sa samorazumljivim nazivima funkcija i varijabli, a složenija logika (npr. deduplikacija, infinite scroll, paralelni fetch) je objašnjena u ovom README-u.
-Za dodatne detalje pogledaj funkcije u HorizontalInfiniteScroll.jsx, FavoriteButton.jsx i API rutama.
-
-
-👨‍💻 Autor
 Josip Božurić
-https://github.com/bozuric
+[Instagram](https://www.instagram.com/josip_bozuric/)
+
+---
+
+## 📄 Dodatno
+
+- Kod je organiziran prema uputama za izradu projekta (App Router, server-side fetch, modularni CSS, API rute, SEO).
+- Za svaki napredniji zahtjev (npr. baza, autentikacija) aplikacija je spremna za proširenje.
+
+---
