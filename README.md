@@ -1,6 +1,7 @@
 🌐 Link aplikacije
 https://top-tv-serije.vercel.app
 
+
 🛠️ Tehnologije korištene
 Next.js – React framework (App Router, SSR, dinamičke rute, API rute)
 
@@ -11,6 +12,7 @@ TVmaze API – Otvoreni API za podatke o serijama, epizodama i glumcima
 Vercel – Platforma za deploy aplikacije
 
 GitHub – Verzijska kontrola i suradnja
+
 
 🚀 Funkcionalnosti
 Pretraga i pregled TV serija (horizontalni infinite scroll na početnoj)
@@ -31,13 +33,14 @@ SEO meta podaci (dynamic title/description, OpenGraph)
 
 Visoke performanse (testirano s Lighthouse)
 
+
 🏗️ Upute za lokalno pokretanje
 bash
 git clone https://github.com/bozuric/Top-serije-app.git
 cd Top-serije-app
 npm install
 npm run dev
-Aplikacija će biti dostupna na http://localhost:3000 (lokalno), dok je produkcijska verzija dostupna na https://top-tv-serije.vercel.app.
+
 
 📦 Build & Deploy
 Za lokalni build:
@@ -48,6 +51,7 @@ npm run start
 Za deploy koristi Vercel – poveži repozitorij, deploy je automatski.
 Aplikacija je online na: https://top-tv-serije.vercel.app
 
+
 ℹ️ Napomena
 Favoriti se spremaju u memoriji servera (RAM) – podaci se brišu nakon restarta servera ili deploya.
 
@@ -55,14 +59,6 @@ Favoriti se spremaju u memoriji servera (RAM) – podaci se brišu nakon restart
 
 Prikaz slika koristi Next.js <Image /> komponentu i automatsku optimizaciju.
 
-📄 Poznate greške / TODO
-Favoriti nisu trajni (nema baze) – podaci se brišu nakon restarta ili redeploya.
-
-Nema korisničke autentikacije.
-
-Nema sortiranja ili filtriranja favorita (može se dodati kao nadogradnja).
-
-Za produkciju bi trebalo koristiti bazu podataka za favorite.
 
 💡 Arhitektura i logika (umjesto opširnih komentara u kodu)
 API rute (app/api/favorites/route.js):
@@ -88,5 +84,7 @@ Komentari u kodu:
 Kod je pisan sa samorazumljivim nazivima funkcija i varijabli, a složenija logika (npr. deduplikacija, infinite scroll, paralelni fetch) je objašnjena u ovom README-u.
 Za dodatne detalje pogledaj funkcije u HorizontalInfiniteScroll.jsx, FavoriteButton.jsx i API rutama.
 
+
 👨‍💻 Autor
 Josip Božurić
+https://github.com/bozuric
