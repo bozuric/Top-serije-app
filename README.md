@@ -1,13 +1,10 @@
-🎬 Top TV Serije
-Top TV Serije je moderna Next.js web aplikacija za pregled, pretragu i spremanje omiljenih TV serija. Omogućuje detaljan prikaz serija, epizoda i glumaca, kao i upravljanje favoritima putem vlastitih API ruta. Aplikacija je optimizirana za performanse i testirana Lighthouse alatom.
-
 🌐 Link aplikacije
 https://top-tv-serije.vercel.app
 
 🛠️ Tehnologije korištene
-Next.js – React framework za SSR, App Router i brzu izradu aplikacija
+Next.js – React framework (App Router, SSR, dinamičke rute, API rute)
 
-CSS Modules & Global CSS – Modularno i globalno stiliziranje bez Tailwinda
+CSS Modules & Global CSS – Modularno i globalno stiliziranje
 
 TVmaze API – Otvoreni API za podatke o serijama, epizodama i glumcima
 
@@ -34,13 +31,13 @@ SEO meta podaci (dynamic title/description, OpenGraph)
 
 Visoke performanse (testirano s Lighthouse)
 
-🏗️ Lokalno pokretanje aplikacije
+🏗️ Upute za lokalno pokretanje
 bash
-git clone https://github.com/ime/TopTVSerije.git
-cd TopTVSerije
+git clone https://github.com/bozuric/Top-serije-app.git
+cd Top-serije-app
 npm install
 npm run dev
-Aplikacija će biti dostupna na http://localhost:3000.
+Aplikacija će biti dostupna na http://localhost:3000 (lokalno), dok je produkcijska verzija dostupna na https://top-tv-serije.vercel.app.
 
 📦 Build & Deploy
 Za lokalni build:
@@ -49,19 +46,47 @@ bash
 npm run build
 npm run start
 Za deploy koristi Vercel – poveži repozitorij, deploy je automatski.
+Aplikacija je online na: https://top-tv-serije.vercel.app
 
 ℹ️ Napomena
 Favoriti se spremaju u memoriji servera (RAM) – podaci se brišu nakon restarta servera ili deploya.
 
-Nije potrebna nikakva .env konfiguracija za osnovnu funkcionalnost, osim ako želiš promijeniti bazni URL za API (vidi .env primjer u kodu).
+.env nije potreban za osnovnu funkcionalnost, ali možeš koristiti NEXT_PUBLIC_SITE_URL za server-side provjeru favorita.
 
 Prikaz slika koristi Next.js <Image /> komponentu i automatsku optimizaciju.
 
+📄 Poznate greške / TODO
+Favoriti nisu trajni (nema baze) – podaci se brišu nakon restarta ili redeploya.
+
+Nema korisničke autentikacije.
+
+Nema sortiranja ili filtriranja favorita (može se dodati kao nadogradnja).
+
+Za produkciju bi trebalo koristiti bazu podataka za favorite.
+
+💡 Arhitektura i logika (umjesto opširnih komentara u kodu)
+API rute (app/api/favorites/route.js):
+Favoriti se spremaju u memoriju servera (RAM). GET vraća sve favorite, POST dodaje novi, DELETE briše po ID-u. Ova metoda je jednostavna za demo, ali nije trajna.
+
+Favoriti:
+Klijentska komponenta koristi useEffect za dohvat trenutnog stanja favorita i useTransition za bolje korisničko iskustvo prilikom dodavanja/brisanja (izbjegava blokiranje sučelja).
+
+Horizontalni infinite scroll:
+Početna stranica koristi server-side fetch i deduplikaciju po ID-u. Infinite scroll je riješen tako da se nove serije učitavaju kad korisnik dođe blizu kraja scrolla.
+
+Prikaz detalja serije:
+Server-side fetch koristi paralelno dohvaćanje podataka o seriji, epizodama i glumcima.
+SEO meta podaci generiraju se dinamički za svaku seriju.
+
+Epizode i glumci:
+Prikaz epizoda i glumaca je jednostavan, s fallbackom za prazne podatke i mogućnošću prikaza svih glumaca.
+
+404 i loading:
+Dodane su globalne fallback stranice za bolji UX.
+
+Komentari u kodu:
+Kod je pisan sa samorazumljivim nazivima funkcija i varijabli, a složenija logika (npr. deduplikacija, infinite scroll, paralelni fetch) je objašnjena u ovom README-u.
+Za dodatne detalje pogledaj funkcije u HorizontalInfiniteScroll.jsx, FavoriteButton.jsx i API rutama.
+
 👨‍💻 Autor
 Josip Božurić
-Instagram
-
-📄 Dodatno
-Kod je organiziran prema uputama za izradu projekta (App Router, server-side fetch, modularni CSS, API rute, SEO).
-
-Za svaki napredniji zahtjev (npr. baza, autentikacija) aplikacija je spremna za proširenje.
