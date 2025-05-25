@@ -6,7 +6,7 @@ Top TV Serije je moderna Next.js web aplikacija za pregled, pretragu i spremanje
 
 ## 🌐 Link aplikacije
 
-[https://top-tv-serije.vercel.app](https://top-tv-serije.vercel.app)
+https://top-serije-app.vercel.app/
 
 ---
 
