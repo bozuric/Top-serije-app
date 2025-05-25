@@ -50,8 +50,6 @@ Za lokalni build:
 bash
 npm run build
 npm run start
-Za deploy koristi Vercel – poveži repozitorij, deploy je automatski.
-Aplikacija je online na: https://top-tv-serije.vercel.app
 
 ℹ️ Napomena
 
