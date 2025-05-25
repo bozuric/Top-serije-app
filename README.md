@@ -78,3 +78,4 @@ Josip Božurić
 - Za svaki napredniji zahtjev (npr. baza, autentikacija) aplikacija je spremna za proširenje.
 
 ---
+    
