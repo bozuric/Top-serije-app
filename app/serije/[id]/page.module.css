@@ -1,0 +1,73 @@
+.serijaMain {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #0001;
+  padding: 32px;
+  max-width: 950px;
+  margin: 0 auto 40px auto;
+}
+
+.serijaTop {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.serijaPoster {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #0002;
+}
+
+.serijaInfo {
+  flex: 1;
+}
+
+.serijaTitle {
+  color: #14204b;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.serijaGenres {
+  color: #2048ca;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.serijaMeta {
+  color: #444;
+  font-size: 1.06rem;
+  margin-bottom: 4px;
+}
+
+.serijaSummary {
+  margin-top: 16px;
+  color: #222;
+  font-size: 1.05rem;
+}
+
+.serijaSection {
+  margin-bottom: 40px;
+}
+
+.serijaBtn {
+  background: #2048ca;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 6px 0 16px 0;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s, color 0.2s;
+}
+.serijaBtn:hover,
+.serijaBtn:focus {
+  background: #14204b;
+  color: #a8bfff;
+}

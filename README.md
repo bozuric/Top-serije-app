@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🎬 Top TV Serije
+Top TV Serije je moderna Next.js web aplikacija za pregled, pretragu i spremanje omiljenih TV serija. Omogućuje detaljan prikaz serija, epizoda i glumaca, kao i upravljanje favoritima putem vlastitih API ruta. Aplikacija je optimizirana za performanse i testirana Lighthouse alatom.
 
-## Getting Started
+🌐 Link aplikacije
+https://top-tv-serije.vercel.app
 
-First, run the development server:
+🛠️ Tehnologije korištene
+Next.js – React framework za SSR, App Router i brzu izradu aplikacija
 
-```bash
+CSS Modules & Global CSS – Modularno i globalno stiliziranje bez Tailwinda
+
+TVmaze API – Otvoreni API za podatke o serijama, epizodama i glumcima
+
+Vercel – Platforma za deploy aplikacije
+
+GitHub – Verzijska kontrola i suradnja
+
+🚀 Funkcionalnosti
+Pretraga i pregled TV serija (horizontalni infinite scroll na početnoj)
+
+Prikaz detalja za svaku seriju (poster, žanrovi, ocjena, status, opis, glumci, epizode)
+
+Spremanje i uklanjanje serija iz favorita (vlastite API rute, bez baze)
+
+Prikaz i brisanje favorita na posebnoj stranici
+
+Prikaz svih epizoda i glumaca s mogućnošću proširenja
+
+Prilagođena 404 (Not Found) stranica i loading prikaz
+
+Brzo, responzivno i pristupačno korisničko sučelje (CSS, sticky footer, moderni header)
+
+SEO meta podaci (dynamic title/description, OpenGraph)
+
+Visoke performanse (testirano s Lighthouse)
+
+🏗️ Lokalno pokretanje aplikacije
+bash
+git clone https://github.com/ime/TopTVSerije.git
+cd TopTVSerije
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Aplikacija će biti dostupna na http://localhost:3000.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📦 Build & Deploy
+Za lokalni build:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+bash
+npm run build
+npm run start
+Za deploy koristi Vercel – poveži repozitorij, deploy je automatski.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ℹ️ Napomena
+Favoriti se spremaju u memoriji servera (RAM) – podaci se brišu nakon restarta servera ili deploya.
 
-## Learn More
+Nije potrebna nikakva .env konfiguracija za osnovnu funkcionalnost, osim ako želiš promijeniti bazni URL za API (vidi .env primjer u kodu).
 
-To learn more about Next.js, take a look at the following resources:
+Prikaz slika koristi Next.js <Image /> komponentu i automatsku optimizaciju.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+👨‍💻 Autor
+Josip Božurić
+Instagram
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📄 Dodatno
+Kod je organiziran prema uputama za izradu projekta (App Router, server-side fetch, modularni CSS, API rute, SEO).
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Za svaki napredniji zahtjev (npr. baza, autentikacija) aplikacija je spremna za proširenje.
