@@ -53,7 +53,6 @@ npm run build
 npm run start
 ```
 
-Za deploy koristi Vercel – poveži repozitorij, deploy je automatski.
 
 ---
 
